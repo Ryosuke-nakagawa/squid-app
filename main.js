@@ -75,5 +75,7 @@ function update(){
 }
 
 function gameOver(){
-    window.confirm('ゲームオーバーです!リロードしてください。')
+  this.physics.pause();
+  player.anims.play('turn');
+  let gameOverText = this.add.text(200, 200, 'GAME OVER', { fontSize: '32px', fill: '#fff' });
 }
